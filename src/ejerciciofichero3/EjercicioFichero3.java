@@ -34,7 +34,7 @@ public class EjercicioFichero3 {
                     menor = numero;
                     primeraVez = true;
                 }
-
+                
                 if (numero > mayor) {
                     mayor = numero;
                     contadorMayor = 1;
@@ -45,17 +45,18 @@ public class EjercicioFichero3 {
                 if (numero < menor) {
                     menor = numero;
                     contadorMenor = 1;
-                } else if (numero == mayor) {
+                } else if (numero == menor) {
                     contadorMenor++;
                 }
+                
+                linea = br.readLine();
             }
 
-            System.out.println(contadorMayor);
-            System.out.println(contadorMenor);
+            System.out.println("Numero mayor: " + mayor + " Numero de veces: " + contadorMayor);
+            System.out.println("Numero menor: " + menor + " Numero de veces: " + contadorMenor);
+            
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
-
     }
-
 }
